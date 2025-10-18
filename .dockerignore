@@ -42,13 +42,24 @@ Thumbs.db
 # Documentation
 README.md
 *.md
+DEPLOYMENT.md
 
-# Jupyter notebooks (optional - remove if you want to include them)
+# Jupyter notebooks - EXCLUDE these large files
 *.ipynb
+
+# Large data files - EXCLUDE these
+*.csv
+btc_15m_data_2018_to_2025.csv
 
 # Temporary files
 *.tmp
 *.temp
 
-# Large data files (optional - remove if you need them)
-*.csv
+# Development files
+python-version.txt
+gitignore.txt
+Procfile.txt
+
+# Docker files (don't need these in the image)
+Dockerfile*
+.dockerignore
