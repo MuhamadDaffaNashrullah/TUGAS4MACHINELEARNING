@@ -134,14 +134,4 @@ def predict():
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
-    debug = os.environ.get('FLASK_DEBUG', '0') == '1'
-    
-    print(f"Starting Flask app on port {port}")
-    print(f"Model loaded: {model is not None}")
-    print(f"Scaler loaded: {scaler is not None}")
-    
-    try:
-        app.run(host='0.0.0.0', port=port, debug=debug)
-    except Exception as e:
-        print(f"Error starting app: {e}")
-        raise
+    app.run(host='0.0.0.0', port=port, debug=os.environ.get('FLASK_DEBUG') == '1')
