@@ -1,15 +1,18 @@
-# Optimized requirements untuk production
+# Optimized requirements untuk production - LIGHTER VERSION
 Flask>=2.3.0
 gunicorn>=20.1.0
 
-# Gunakan TensorFlow CPU yang lebih kecil
-tensorflow-cpu==2.12.0
+# TensorFlow versi yang lebih ringan - opsi terbaik untuk deployment
+tensorflow-cpu==2.10.1
 
-# Dependencies lainnya
-joblib>=1.3.0
-numpy>=1.23.0
-h5py>=3.8.0
-scikit-learn>=1.3.0
+# Alternatif jika masih terlalu besar:
+# tensorflow-lite==2.10.0
+
+# Dependencies lainnya - versi minimal yang kompatibel
+joblib>=1.2.0
+numpy>=1.21.0
+h5py>=3.7.0
+scikit-learn>=1.1.0
 
 # Optional: untuk optimasi tambahan
-Pillow>=9.0.0
+Pillow>=8.0.0
