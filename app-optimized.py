@@ -166,7 +166,30 @@ def predict():
 # Optimasi: health check endpoint untuk Railway
 @app.route('/health')
 def health():
-    return {'status': 'healthy', 'model_loaded': model is not None, 'scaler_loaded': scaler is not None}
+    """Health check endpoint untuk Railway"""
+    try:
+        status = {
+            'status': 'healthy',
+            'model_loaded': model is not None,
+            'scaler_loaded': scaler is not None,
+            'timestamp': str(__import__('datetime').datetime.now())
+        }
+        return status, 200
+    except Exception as e:
+        return {'status': 'unhealthy', 'error': str(e)}, 500
+
+@app.route('/health/live')
+def health_live():
+    """Liveness probe untuk Railway"""
+    return {'status': 'alive'}, 200
+
+@app.route('/health/ready')
+def health_ready():
+    """Readiness probe untuk Railway"""
+    if model is not None and scaler is not None:
+        return {'status': 'ready'}, 200
+    else:
+        return {'status': 'not ready'}, 503
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
