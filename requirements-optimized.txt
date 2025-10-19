@@ -1,0 +1,15 @@
+# Optimized requirements untuk production
+Flask>=2.3.0
+gunicorn>=20.1.0
+
+# Gunakan TensorFlow CPU yang lebih kecil
+tensorflow-cpu==2.12.0
+
+# Dependencies lainnya
+joblib>=1.3.0
+numpy>=1.23.0
+h5py>=3.8.0
+scikit-learn>=1.3.0
+
+# Optional: untuk optimasi tambahan
+Pillow>=9.0.0

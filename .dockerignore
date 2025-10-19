@@ -1,0 +1,36 @@
+# Ignore files yang tidak diperlukan untuk production
+*.ipynb
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+.git
+.gitignore
+README.md
+.env
+.venv
+venv/
+env/
+.pytest_cache/
+.coverage
+htmlcov/
+.DS_Store
+Thumbs.db
+
+# Ignore large data files yang tidak diperlukan
+*.csv
+!requirements*.txt
+
+# Ignore development files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Ignore test files
+test/
+tests/
+*_test.py
+test_*.py
