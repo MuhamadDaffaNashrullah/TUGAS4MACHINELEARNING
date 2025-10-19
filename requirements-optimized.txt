@@ -1,18 +1,15 @@
-# Optimized requirements untuk production - LIGHTER VERSION
-Flask>=2.3.0
-gunicorn>=20.1.0
+# Optimized requirements untuk production - FIXED VERSIONS
+Flask==2.3.3
+gunicorn==20.1.0
 
-# TensorFlow versi yang lebih ringan - opsi terbaik untuk deployment
-tensorflow-cpu==2.10.1
+# TensorFlow versi yang tersedia dan ringan
+tensorflow-cpu==2.15.0
 
-# Alternatif jika masih terlalu besar:
-# tensorflow-lite==2.10.0
-
-# Dependencies lainnya - versi minimal yang kompatibel
-joblib>=1.2.0
-numpy>=1.21.0
-h5py>=3.7.0
-scikit-learn>=1.1.0
+# Dependencies lainnya - versi yang kompatibel
+joblib==1.3.2
+numpy==1.24.3
+h5py==3.9.0
+scikit-learn==1.3.0
 
 # Optional: untuk optimasi tambahan
-Pillow>=8.0.0
+Pillow==10.0.1

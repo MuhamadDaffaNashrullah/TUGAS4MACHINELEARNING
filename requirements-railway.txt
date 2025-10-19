@@ -1,0 +1,12 @@
+# Railway-optimized requirements dengan versi yang kompatibel
+Flask==2.3.3
+gunicorn==20.1.0
+
+# TensorFlow versi yang kompatibel dengan numpy
+tensorflow-cpu==2.12.0
+
+# Dependencies yang kompatibel dengan TensorFlow 2.12.0
+joblib==1.3.2
+numpy==1.23.5
+h5py==3.8.0
+scikit-learn==1.2.2
